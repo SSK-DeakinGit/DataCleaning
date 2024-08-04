@@ -60,4 +60,4 @@ df_geo = df[column_of_interest_geo]
 df_combined = pd.concat([df_activity, df_geo], axis=1)
 
 # Saving the combined DataFrame to a single CSV file
-df_combined.to_csv('combined_data.csv', index=False)
+df_combined.to_csv('activities_cleaned.csv', index=False)
