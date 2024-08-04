@@ -33,15 +33,15 @@ df[object_cols] = df[object_cols].fillna('N/A')
 for column in df.columns:
     print(column)
 
-# Applying the functions whereever needed
+# Applying the functions wherever needed
 df["Activity Type"] = df["Activity Type"].apply(translate_activity)
 df["Begin Timestamp"] = df["Begin Timestamp"].apply(create_date_obj)
 df["End Timestamp"] = df["End Timestamp"].apply(create_date_obj)
 df["Average Speed"] = df["Average Speed"].apply(remove_text_from_speed)
 
-# Selecting the required columns ignoring the the columns that are repeated
+# Selecting the required columns, ignoring the the columns that are repeated
 
-# column_of_interest_user = ["user_id", "name", "age", "gender", "height", "weight"]
+# WIP - column_of_interest_user = ["user_id", "name", "age", "gender", "height", "weight"]
 
 column_of_interest_activity = ["Activity ID", "Activity Type", "Begin Timestamp", "End Timestamp", "Max. Elevation (Raw)",
                                "Min. Elevation (Raw)", "Elevation Gain (Raw)", "Elevation Loss (Raw)",
